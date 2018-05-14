@@ -91,7 +91,9 @@ the provider you will be working with.
 
 $ vagrant box add ubuntu/xenial64 
 ---------------------------------
-$vagrant up
+$vagrant up puppetmaster
+$vagrant up puppet-agent-centos
+$vagrant up puppet-agent-ubuntu 
 
 $ vagrant status
 Current machine states:
@@ -103,25 +105,25 @@ vagrant ssh puppetmaster
 vagrant ssh puppet-agent-centos
 vagrant ssh puppet-agent-ubuntu
 
----------install  atom-----------
+================install  atom  Editor ================
 install atom.io editor  and  language-puppet  package
 ??install software from atom.io, then on git command line
 $ apm install language-puppet
 Installing language-puppet to C:\Users\Admin\.atom\packages done
 
------ this not need for nomral  usage ----------
+====== this not need for nomral  usage ===========
+# to enable to login with ip address   user/pass = vagrant/vagrant
 ip addr show
 vi /etc/ssh/sshd_config
 PasswordAuthentication yes
 systemctl restart sshd
-----------------------------------
-puppet eco-system
+=========================
+\puppet eco-system
 client-server architecture
-puppet master 
+==puppet master 
 	puppet server is JVM application that provide puppet master services.
 	it can be configured on centos/ubuntu with puppet server package installed.
-puppet DB
-		opensource database 
+puppet DB : opensource database 
 puppet agent: deamons run on the client 
 factor :
 
