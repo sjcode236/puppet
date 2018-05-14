@@ -4,8 +4,6 @@ Puppet Essentials for Beginners   (3 vm learning)
 by Anirban Saha
 Published: April 2017
 
-
-
 install virtualbox  for windows
 install git
 Install  vagrant  
