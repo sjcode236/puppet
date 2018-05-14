@@ -7,11 +7,12 @@ Published: April 2017
 install virtualbox  for windows
 install git
 Install  vagrant  
-open  git-bash  on c:\soby
-cd /c/soby/Anirbanpuppet/
+open  git-bash  on c:\bobtk
+cd /c/bobtk/Anirbanpuppet/
 vagrant version
 vagrant init
-vi Vagrantfile
+## to make 1 centOS puppetMaster 1 centOS agent 1 ubuntu Agent 
+vi Vagrantfile     
 Vagrant.configure("2") do |config|
 # make sure vm ips  different from LAN ips of other devicesa
 	config.vm.define "puppetmaster" do |pm|
@@ -39,6 +40,39 @@ Vagrant.configure("2") do |config|
 		pac.vm.provider "virtualbox" do |v-pau|
 			v-pau.memory = 1750
 			v-pau.cpus = 1
+		end		 
+	end
+end
+
+# if want to make  1 centOS puppetMaster 2 centOS agents use below vagrant file configuration   
+vi Vagrantfile     
+Vagrant.configure("2") do |config|
+# make sure vm ips  different from LAN ips of other devicesa
+	config.vm.define "puppetmaster" do |pm|
+		pm.vm.box = "centos/7"
+		pm.vm.network "private_network",ip: "192.168.2.161"
+		pm.vm.hostname = "puppetmaster"
+		pm.vm.provider "virtualbox" do |v-pm|
+			v-pm.memory = 2500
+			v-pm.cpus = 2
+		end
+	end
+	config.vm.define "puppet-agent-centos1" do |pac|
+		pac.vm.box = "centos/7"
+		pac.vm.network "private_network",ip: "192.168.2.162"
+		pac.vm.hostname = "centos-agent"
+		pac.vm.provider "virtualbox" do |v-pac|
+			v-pac.memory = 1800
+			v-pac.cpus = 1
+		end		 
+	end
+	config.vm.define "puppet-agent-centos2" do |pac|
+		pac.vm.box = "centos/7"
+		pac.vm.network "private_network",ip: "192.168.2.163"
+		pac.vm.hostname = "centos-agent"
+		pac.vm.provider "virtualbox" do |v-pac|
+			v-pac.memory = 1800
+			v-pac.cpus = 1
 		end		 
 	end
 end
