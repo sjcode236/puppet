@@ -473,14 +473,22 @@ forge "https://forgeapi.puppetlabs.com"
  mod 'puppetlabs-apt',
    :git => 'https://github.com/puppetlabs/puppetlabs-apt.git',
    :ref => '1.4.x'
-----
+----    ------     -------------
 [root@puppetmaster opt]# librarian-puppet install
 [root@puppetmaster opt]# cd modules
 [root@puppetmaster modules]# ls -l
 drwxr-xr-x.  7 root root 4096 May  6 00:48 apt
 drwxr-xr-x. 11 root root 4096 May  6 00:48 ntp
 drwxr-xr-x.  9 root root 4096 May  6 00:48 stdlib
--------------------------------------------------
+=========to install git on centos linux =====
+yum install git
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --list
+	user.name=Your Name
+	user.email=you@example.com
+====================================================
 ====Managing Environments with r10K ===========================================
 environments path is 
 /etc/puppetlabs/code/environments 
@@ -503,8 +511,8 @@ https://github.com/sjcode236/envAnirban2.git
 cd /opt
 git clone  https://github.com/sjcode236/envAnirban2.git
  cd envAnirban2/
-[root@puppetmaster testrepo2]#     git config --global user.name  "lenov lap"
-[root@puppetmaster testrepo2]#     git config --global user.email "sjbuy25@gmail.com"
+[root@puppetmaster envAnirban2]#     git config --global user.name  "lenov lap"
+[root@puppetmaster envAnirban2]#     git config --global user.email "sjbuy25@gmail.com"
 
 librarian-puppet init
  vi Puppetfile    ---->edit the file as below
@@ -558,7 +566,7 @@ class testrepo2  {
             }
     } else {
             notify { 'default-message' :
-                 message => "This is not production"
+                 message => "This is not production env"
             }
     }  
 }
@@ -591,8 +599,7 @@ Switched to branch 'staging'
 Switched to branch 'test'
 # git push origin test
 
------>  next install r10k
-cd 
+====>  next install r10k
 [root@puppetmaster envAnirban2]# gem install r10k --no-rdoc --no-ri
 Fetching: colored-1.2.gem (100%)
 Successfully installed colored-1.2
