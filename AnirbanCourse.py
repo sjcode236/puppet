@@ -256,6 +256,9 @@ ps -ef |grep  puppet
 netstat -anp |grep 8140
     ==if not running start or restart puppetserver
 	systemctl start puppetserver
+    # netstat -anp |grep 8140    output need to be like below
+tcp6       0      0 :::8140                 :::*                    LISTEN      7397/java
+
 can try below commands too 
   =Following command is for starting the server :
 puppet resource service puppetserver ensure=running
