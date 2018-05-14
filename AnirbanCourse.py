@@ -247,6 +247,22 @@ full path is /etc/puppetlabs/code/environments/production/modules/webserver/mani
 #facter 
 #facter os.family
 puppet agent --test --server puppetmaster.home
+====Note :-
+>>> if getting error like below 
+Error: Could not request certificate: Connection refused - connect(2) for "puppetmaster.home" port 8140
+
+verify puppetserver is running 
+ps -ef |grep  puppet
+netstat -anp |grep 8140
+    ==if not running start or restart puppetserver
+	systemctl start puppetserver
+can try below commands too 
+  =Following command is for starting the server :
+puppet resource service puppetserver ensure=running
+  =This command is to enable the server.
+ puppet resource service puppetserver enable=true		
+====Note end ===================
+
 
 ==>@on puppetmster 
 puppet cert list 
