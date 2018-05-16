@@ -181,7 +181,31 @@ git push origin master
 
 
 ====================================
+***TO see all branches
+git branch --all
 
+***TO see on which branch  now checkout to
+[root@puppetmaster envAnirban2]# git branch
+  master
+  production
+  staging
+* test
+
+***To delete  remote branch at  github  
+git push origin --delete  staging    
+ 
+***Deleting a local branch:
+git branch --delete <branch>
+git branch -d <branch> # Shorter version
+git branch -D <branch> # Force delete un-merged branches
+***Deleting a local remote-tracking branch:
+git branch --delete --remotes <remote>/<branch>
+git branch -rd <remote>/<branch> # Shorter
+git branch -rd  origin/staging
+
+git fetch <remote> --prune # Delete multiple obsolete tracking branches
+git fetch <remote> -p      # Shorter
+***Note that this removes all obsolete local remote-tracking branches for any remote branches that no longer exist on the remote:
 
  
 
