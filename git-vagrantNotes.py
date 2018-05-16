@@ -1,10 +1,23 @@
 
 
-setting up Vagrant for chef and package a vagrant boxe
+====================================================
+====putty download=========
+https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+http://cmder.net/   (for ssh on windows )
+
+https://git-scm.com/downloads
+===============================================
+
+setting up Vagrant for chef and package a vagrant box
 https://gist.github.com/dergachev/3866825
 
 Setting Up Vagrant Environment on Windows Platform
 https://github.com/saasbook/courseware/wiki/Setting-Up-Vagrant-Environment-on-Windows-Platform
+
+===========================================================
+https://www.vagrantup.com/downloads.html
+   download windows 64 bit vagrant and install 
 
 vagrant list-commands
 vagrant box add ADDRESS
