@@ -19,7 +19,11 @@ ensure => ['2.2.1'],
 [root@stand ~]# librarian-puppet version
 librarian-puppet v2.2.1
 
-***The librarian-puppet project uses a Puppetfile to define the modules that will be installed. The syntax is the name of the module followed by a comma and the version to install. Modules may be pulled in from Git repositories or directly from Puppet Forge. You can override the location of Puppet Forge using a forge line as well. Our initial Puppetfile would be the following:
+***The librarian-puppet project uses a Puppetfile to define the modules that will be installed. 
+The syntax is the name of the module followed by a comma and the version to install.
+Modules may be pulled in from Git repositories or directly from Puppet Forge. 
+You can override the location of Puppet Forge using a forge line as well. 
+ sample  Puppetfile would be the following:
 
 forge "http://forge.puppetlabs.com"
 mod 'puppetlabs/puppetdb', '5.0.0'
