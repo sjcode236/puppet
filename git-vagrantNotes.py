@@ -1,7 +1,7 @@
 
 
 ====================================================
-====putty download=========
+`====putty download=========
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 http://cmder.net/   (for ssh on windows )
