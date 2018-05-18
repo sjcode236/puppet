@@ -493,6 +493,12 @@ git config --list
 	user.email=you@example.com
 ====================================================
 ====Managing Environments with r10K ===========================================
+***r10k is like  librarian-puppet and Git repos  in a single package.
+ r10k takes the Git repositories specified in /etc/puppetlabs/r10k/r10k.yaml and checks out each branch of the repositories
+	into a subdirectory of the environment directory (the environment directory is also specified in /etc/puppetlabs/r10k/r10k.yaml). 
+ If there is a Puppetfile in the root of the branch, then r10k parses the file in the same way that librarian-puppet does and it installs the specified modules in a directory named modules under the environment directory.
+ 
+
 environments path is 
 /etc/puppetlabs/code/environments 
 *default environment is 
