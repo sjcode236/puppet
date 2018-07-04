@@ -1,6 +1,8 @@
 
 
 ====================================================
+Notepad++  and atom.io  editors 
+
 `====putty download=========
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
