@@ -114,8 +114,8 @@ https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 http://cmder.net/   (for ssh on windows )
 
-https://git-scm.com/downloads
 ===download and install Git-2.17.0-64-bit
+https://git-scm.com/downloads
 during installation select 
 "Use Git and optional Unix tools from the windows Command prompt"
 then launch git bash  
