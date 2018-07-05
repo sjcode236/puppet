@@ -13,8 +13,7 @@ Installing language-puppet to C:\Users\Admin\.atom\packages done
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 http://cmder.net/   (for ssh on windows )
-
-https://git-scm.com/downloads
+https://git-scm.com/downloads   ==(can use  git like putty )
 ===============================================
 
 setting up Vagrant for chef and package a vagrant box
