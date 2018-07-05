@@ -64,20 +64,7 @@ vagrant status
 
 vagrant up puppetmaster
 vagrant halt puppetmaster 
-====to pre download the boxes ======================================
-$ vagrant box add  centos/7
-==> box: Loading metadata for box 'centos/7'
-    box: URL: https://vagrantcloud.com/centos/7
-This box can work with multiple providers! The providers that it
-can work with are listed below. Please review the list and choose
-the provider you will be working with.
-1) hyperv
-2) libvirt
-3) virtualbox
-4) vmware_desktop
 
-$ vagrant box add ubuntu/xenial64 
-=======================================================
 $vagrant up puppetmaster
 $vagrant up puppet-agent-centos
 $vagrant up puppet-agent-ubuntu 
@@ -98,8 +85,22 @@ vi /etc/ssh/sshd_config
 PasswordAuthentication yes
 systemctl restart sshd
 ===================================================
+====to pre download the boxes ======================================
+$ vagrant box add  centos/7
+==> box: Loading metadata for box 'centos/7'
+    box: URL: https://vagrantcloud.com/centos/7
+This box can work with multiple providers! The providers that it
+can work with are listed below. Please review the list and choose
+the provider you will be working with.
+1) hyperv
+2) libvirt
+3) virtualbox
+4) vmware_desktop
 
-----vagrant file for multiple vms ----------
+$ vagrant box add ubuntu/xenial64 
+
+----vagrant file entry for multiple vms ----------
+$ vi Vagrantfile
 Vagrant.configure("2") do |config|
     config.vm.provider "virtualbox" do |v|
 		v.memory = 1800
