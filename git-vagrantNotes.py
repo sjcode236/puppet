@@ -1,9 +1,9 @@
 
 
-===============================================================
-Notepad++  and atom.io  editors 
+======Notepad++  and atom.io  editors =========================================================
+Notepad++   
+https://notepad-plus-plus.org/download
 
-================install  atom  Editor ==========================
 install atom.io editor  and  language-puppet  package
 ??install software from atom.io, then on git command line
 $ apm install language-puppet
