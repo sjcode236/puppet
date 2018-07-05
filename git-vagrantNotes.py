@@ -1,9 +1,9 @@
 
 
-====================================================
+===============================================================
 Notepad++  and atom.io  editors 
 
-================install  atom  Editor ================
+================install  atom  Editor ==========================
 install atom.io editor  and  language-puppet  package
 ??install software from atom.io, then on git command line
 $ apm install language-puppet
@@ -22,9 +22,19 @@ https://gist.github.com/dergachev/3866825
 Setting Up Vagrant Environment on Windows Platform
 https://github.com/saasbook/courseware/wiki/Setting-Up-Vagrant-Environment-on-Windows-Platform
 
-===========================================================
+===Vagrant  ========================================================
 https://www.vagrantup.com/downloads.html
    download windows 64 bit vagrant and install 
+
+install virtualbox  for windows
+	http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html
+	https://www.virtualbox.org/wiki/Downloads
+install git
+Install  vagrant  
+open  git-bash  on c:\bobtk
+cd /c/bobtk/Anirbanpuppet/
+vagrant version
+vagrant init
 
 vagrant list-commands
 vagrant box add ADDRESS
