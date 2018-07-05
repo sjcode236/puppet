@@ -29,10 +29,11 @@ https://www.vagrantup.com/downloads.html
 install virtualbox  for windows
 	http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html
 	https://www.virtualbox.org/wiki/Downloads
-install git
+install git  ==(details later below )
 Install  vagrant  
+
 open  git-bash  on c:\bobtk
-cd /c/bobtk/Anirbanpuppet/
+cd /c/bobtk/sparkvm/
 vagrant version
 vagrant init
 
@@ -55,14 +56,48 @@ vagrant halt
 vagrant destroy
 vagrant status
 
----download  vagrant images from vagrantcloud.com
------- to download  OS iamges/box  to vargrant
+==== download  vagrant images from vagrantcloud.com
+==== to download  OS iamges/box  to vargrant
  vagrant box add precise64 http://files.vagrantup.com/precise64.box # 323MB, faster download
  vagrant box add "centos/7"
  vagrant box add "ubuntu/xenial64"
 
 vagrant up puppetmaster
 vagrant halt puppetmaster 
+====to pre download the boxes ======================================
+$ vagrant box add  centos/7
+==> box: Loading metadata for box 'centos/7'
+    box: URL: https://vagrantcloud.com/centos/7
+This box can work with multiple providers! The providers that it
+can work with are listed below. Please review the list and choose
+the provider you will be working with.
+1) hyperv
+2) libvirt
+3) virtualbox
+4) vmware_desktop
+
+$ vagrant box add ubuntu/xenial64 
+=======================================================
+$vagrant up puppetmaster
+$vagrant up puppet-agent-centos
+$vagrant up puppet-agent-ubuntu 
+
+$ vagrant status
+Current machine states:
+puppetmaster              running (virtualbox)
+puppet-agent-centos       running (virtualbox)
+puppet-agent-ubuntu       running (virtualbox)
+
+vagrant ssh puppetmaster 
+vagrant ssh puppet-agent-centos
+vagrant ssh puppet-agent-ubuntu
+====== Setting to login with ip address===============================
+# to enable to login with ip address   user/pass = vagrant/vagrant
+ip addr show
+vi /etc/ssh/sshd_config
+PasswordAuthentication yes
+systemctl restart sshd
+===================================================
 
 ----vagrant file for multiple vms ----------
 Vagrant.configure("2") do |config|
