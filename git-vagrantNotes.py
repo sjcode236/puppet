@@ -3,7 +3,13 @@
 ====================================================
 Notepad++  and atom.io  editors 
 
-`====putty download=========
+================install  atom  Editor ================
+install atom.io editor  and  language-puppet  package
+??install software from atom.io, then on git command line
+$ apm install language-puppet
+Installing language-puppet to C:\Users\Admin\.atom\packages done
+
+`====putty download=============================================================================
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 http://cmder.net/   (for ssh on windows )
@@ -108,14 +114,9 @@ end
 
 --------------------------------------------------
 
-====git installation section=========
-====putty download=========
-https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-
-http://cmder.net/   (for ssh on windows )
-
-===download and install Git-2.18.0-64-bit   
-https://git-scm.com/downloads
+====git installation section======================================================================
+===download and install Git-2.18.0-64-bit 
+https://git-scm.com/downloads      ==(download from here)
 during installation select 
 "Use Git and optional Unix tools from the windows Command prompt"
 then launch git bash  
